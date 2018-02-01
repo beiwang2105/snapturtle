@@ -22,6 +22,8 @@
  * THE SOFTWARE.
  */
 
+const snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
+
 /**
  * @constructor
  * Creates a SnapTurtle object from a Snap SVG element.
@@ -29,6 +31,7 @@
  * @param {number=} x Initial x-position of the turtle; default 0 (left edge).
  * @param {number=} y Initial y-position of the turtle; default 0 (top edge).
  */
+
 function SnapTurtle(snap, x, y) {
     this._snap = snap;
     this._heading = 90;
@@ -166,3 +169,5 @@ SnapTurtle.prototype.animate = function (val, speed) {
     this._animating = val;
     this._animSpeed = speed;
 };
+
+export default SnapTurtle;

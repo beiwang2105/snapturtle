@@ -1,4 +1,9 @@
-var t = new SnapTurtle(Snap(800, 800), 400, 400);
+const snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
+let SnapTurtle = require('./snapturtle.js').default;
+import turtuleImg from './images/turtle.jpeg';
+import './css/style.css';
+
+var t = new SnapTurtle(snap(800, 800), 400, 400);
 
 function circle(inc) {
     for (var i = 0; i < 360; i++) {

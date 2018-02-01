@@ -63,8 +63,8 @@ function polyspi(size, angle, step) {
     polyspi(size + step, angle, step);
 }
 
-t.animate(true, 500);
-polyspi(20, 72, 3);
+//t.animate(true, 500);
+//polyspi(20, 72, 3);
 
 function dragon(size, level, isRight) {
     if (level === 0) {
@@ -107,3 +107,10 @@ function nestedTriangle(size) {
 
 //t.goto(200, 400).right(30);
 //nestedTriangle(320);
+
+//wwj test
+t.animate(true, 500); //控制速度
+//polyspi(20, 72, 3);
+t.forward(20).right(72);
+t.forward(20).right(72);
+t.forward(20).right(72);
